@@ -1,4 +1,4 @@
-Shader "Unlit/Dissolve"
+Shader "Custom/Dissolve"
 {
 	Properties
 	{

@@ -1,4 +1,4 @@
-Shader "Unlit/PortalGlow"
+Shader "Custom/PortalGlow"
 {
     Properties
     {

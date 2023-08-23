@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _DisplacementTex:
+        m_Texture: {fileID: 2800000, guid: 8b692b3af5c55f044b12ff1102f4df90, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SurfaceDistortion:
         m_Texture: {fileID: 2800000, guid: b9a745bd8bec9134dabd585694b1ccc9, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -31,15 +35,16 @@ Material:
     - _Amplitude: 0.0001
     - _DepthMaxDistance: 1
     - _FoamDistance: 0.04
-    - _FoamMaxDistance: 1.08
+    - _FoamMaxDistance: 0.6
     - _FoamMinDistance: 0.04
     - _Frequency: 0.87
-    - _Speed: 5
+    - _Speed: 3.1
     - _SurfaceDistortionAmount: 0.77
     - _SurfaceNoiseCutoff: 0.67
     m_Colors:
     - _DepthGradientDeep: {r: 0.08627451, g: 0.40784314, b: 1, a: 0.7254902}
     - _DepthGradientShallow: {r: 0.3254902, g: 0.80784315, b: 0.972549, a: 0.7254902}
+    - _DisplacementParams: {r: 0.02, g: 0.02, b: 0.02, a: 0}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
     - _SurfaceNoiseScroll: {r: 0.05, g: 0.05, b: 0, a: 0}
   m_BuildTextureStacks: []

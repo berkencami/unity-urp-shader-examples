@@ -1,4 +1,4 @@
-Shader "Unlit/Mask"
+Shader "Custom/Mask"
 {
     Properties
     {

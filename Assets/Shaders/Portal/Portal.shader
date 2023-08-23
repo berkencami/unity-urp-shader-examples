@@ -1,4 +1,4 @@
-Shader "Unlit/Portal"
+Shader "Custom/Portal"
 {
     Properties
     {

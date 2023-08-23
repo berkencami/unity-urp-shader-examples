@@ -1,4 +1,4 @@
-﻿Shader "Unlit/ForceField"
+﻿Shader "Custom/ForceField"
 {
     Properties
     {

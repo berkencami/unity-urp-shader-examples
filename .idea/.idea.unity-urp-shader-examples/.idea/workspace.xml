@@ -3,20 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="0daeee9c-f3cc-4c44-98c8-c7e4a43bdf05" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.unity-urp-shader-examples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.unity-urp-shader-examples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Flag/New Material.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Flag/New Material.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Water/Water.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Water/Water.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Mesh/Wood_BoatV1.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Mesh/Wood_BoatV1.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/New Terrain.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Water&amp;Flag.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Water&amp;Flag.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Water.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shaders/Water.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Water.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/Water.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Textures/flag.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Textures/flag.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Water/ToonWater.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Water/ToonWater.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ToonWater.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ToonWater.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/BlackHole.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/BlackHole.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/FlagShader.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/FlagShader.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shaders/ToonWater.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/ToonWater.shader" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +73,8 @@
       <workItem from="1690550884402" duration="92000" />
       <workItem from="1692101118431" duration="565000" />
       <workItem from="1692345671975" duration="3840000" />
+      <workItem from="1692772373986" duration="965000" />
+      <workItem from="1692796916973" duration="1865000" />
     </task>
     <servers />
   </component>

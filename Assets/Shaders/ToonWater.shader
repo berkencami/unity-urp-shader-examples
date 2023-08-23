@@ -1,4 +1,4 @@
-﻿Shader "Unlit/ToonWater"
+﻿Shader "Custom/ToonWater"
 {
     Properties
     {
@@ -22,12 +22,12 @@
         _FoamMaxDistance("Foam Maximum Distance", Float) = 0.4
         _FoamMinDistance("Foam Minimum Distance", Float) = 0.04
         [HDR]_FoamColor("Foam Color", Color) = (1,1,1,1)
-        
-         [Header(Wave animation properties)]
+
+        [Header(Wave animation properties)]
         [Space(10)]
+        _DisplacementTex("Displacement texture", 2D) = "white" {}
+        _DisplacementParams("Speed (.xy) | Intensity (.z)", Vector) = (0, 0, 0, 0)
         _Speed("Speed", Range(0, 5.0)) = 0
-        _Frequency("Frequency", Range(0, 1)) = 1
-        _Amplitude("Amplitude", Range(0, 0.04)) = 0
 
     }
     SubShader
@@ -63,13 +63,15 @@
             };
 
             sampler2D _SurfaceDistortion;
-            float4 _SurfaceDistortion_ST;
-
-            float _SurfaceDistortionAmount;
             sampler2D _CameraDepthTexture;
             sampler2D _CameraNormalsTexture;
             sampler2D _SurfaceNoise;
+            sampler2D _DisplacementTex;
+            float4 _SurfaceDistortion_ST;
+            float4 _DisplacementTex_ST;
             float4 _SurfaceNoise_ST;
+
+            float _SurfaceDistortionAmount;
             float _SurfaceNoiseCutoff;
             float4 _DepthGradientShallow;
             float4 _DepthGradientDeep;
@@ -80,8 +82,8 @@
             float _FoamMaxDistance;
             float _FoamMinDistance;
             float _Speed;
-            float _Frequency;
-            float _Amplitude;
+
+            float4 _DisplacementParams;
 
             float4 alphaBlend(float4 top, float4 bottom)
             {
@@ -91,17 +93,27 @@
                 return float4(color, alpha);
             }
 
+            float4 MoveVertex(float4 vertex, float3 normal, float2 uv)
+            {
+                float4 displacementMap = tex2Dlod(_DisplacementTex,
+                                                  float4(uv + _DisplacementParams.xy * _Time.y*_Speed, 0, 0));
+
+                vertex.xyz += displacementMap * normal * _DisplacementParams.z;
+
+                return vertex;
+            }
+
             v2f vert(appdata v)
             {
                 v2f o;
 
-                v.vertex.y += cos((v.vertex.x + _Time.y * _Speed) * _Frequency) * _Amplitude;
+                v.vertex = MoveVertex(v.vertex, v.normal, v.uv);
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.screenPosition = ComputeScreenPos(o.vertex);
                 o.noiseUV = TRANSFORM_TEX(v.uv, _SurfaceNoise);
                 o.distortUV = TRANSFORM_TEX(v.uv, _SurfaceDistortion);
                 o.viewNormal = COMPUTE_VIEW_NORMAL;
-                
+
 
                 return o;
             }

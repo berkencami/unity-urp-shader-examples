@@ -1,4 +1,4 @@
-﻿Shader "Unlit/Gradient Skybox"
+﻿Shader "Custom/Gradient Skybox"
 {
 	Properties
 	{

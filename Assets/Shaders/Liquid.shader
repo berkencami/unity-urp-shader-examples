@@ -1,4 +1,4 @@
-Shader "Unlit/Liquid"
+Shader "Custom/Liquid"
 {
     Properties
     {

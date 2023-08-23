@@ -1,4 +1,4 @@
-﻿Shader "Unlit/InvincibleWall"
+﻿Shader "Custom/InvincibleWall"
 {
 	Properties
 	{
