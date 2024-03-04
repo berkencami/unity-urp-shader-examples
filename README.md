@@ -23,3 +23,7 @@
 
 # Portal
 ![ScreenShot](https://github.com/BerkEncami/unity-urp-shader-examples/blob/main/Giffs/portal.gif)
+
+# Grayscale
+![ScreenShot](https://github.com/BerkEncami/unity-urp-shader-examples/blob/main/Giffs/grayscale.gif)
+
